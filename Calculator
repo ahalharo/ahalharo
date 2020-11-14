@@ -1,0 +1,32 @@
+
+
+def welcome_screen():
+    print(""""Welcome to my Calculator
+    to continue, please follow the instructions:
+    Press 1 for addition operation
+    Press 2 for multiplication
+    """)
+    choice = int(input("> "))
+
+    if choice == 1:
+         x = int(input("x: "))
+         y = int(input("y: "))
+         res = plus(x, y)
+         print ("The result is: ", res)
+    elif choice == 2:
+        x = int(input("x: "))
+        y = int(input("y: "))
+        res = mult(x,y)
+        print ("The result is: ", res)
+    else:
+        print("Exiting...")
+
+
+def plus(x, y):
+    return x + y
+
+
+def mult (x,y):
+    return x * y
+
+welcome_screen()
