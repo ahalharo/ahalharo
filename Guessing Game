@@ -1,0 +1,17 @@
+#Random Guessing Game
+import random
+mynum = random.randint(0,15)
+guess = int(input("Input your number:"))
+counter = 1
+while guess != mynum and counter < 3:
+    if guess < mynum:
+        print("Number is low")
+    else: 
+        print("Number is high")
+    guess = int(input("Input your number:"))
+    counter = counter + 1
+if guess == mynum:
+    print ("Great you got the correct number", mynum)
+    print ("you got the answer after ", counter)
+else:
+    print ("game over, you did not guess the number, the number was ", mynum)
